@@ -1,0 +1,174 @@
+----------------
+IN: 
+0x00000000:  00000000      andeq	r0, r0, r0
+0x00000004:  00000000      andeq	r0, r0, r0
+0x00000008:  00000000      andeq	r0, r0, r0
+0x0000000c:  00000000      andeq	r0, r0, r0
+0x00000010:  00000000      andeq	r0, r0, r0
+0x00000014:  00000000      andeq	r0, r0, r0
+0x00000018:  00000000      andeq	r0, r0, r0
+0x0000001c:  00000000      andeq	r0, r0, r0
+0x00000020:  00000000      andeq	r0, r0, r0
+0x00000024:  00000000      andeq	r0, r0, r0
+0x00000028:  00000000      andeq	r0, r0, r0
+0x0000002c:  00000000      andeq	r0, r0, r0
+0x00000030:  00000000      andeq	r0, r0, r0
+0x00000034:  00000000      andeq	r0, r0, r0
+0x00000038:  00000000      andeq	r0, r0, r0
+0x0000003c:  00000000      andeq	r0, r0, r0
+0x00000040:  00000000      andeq	r0, r0, r0
+0x00000044:  00000000      andeq	r0, r0, r0
+0x00000048:  00000000      andeq	r0, r0, r0
+0x0000004c:  00000000      andeq	r0, r0, r0
+0x00000050:  00000000      andeq	r0, r0, r0
+0x00000054:  00000000      andeq	r0, r0, r0
+0x00000058:  00000000      andeq	r0, r0, r0
+0x0000005c:  00000000      andeq	r0, r0, r0
+0x00000060:  00000000      andeq	r0, r0, r0
+0x00000064:  00000000      andeq	r0, r0, r0
+0x00000068:  00000000      andeq	r0, r0, r0
+0x0000006c:  00000000      andeq	r0, r0, r0
+0x00000070:  00000000      andeq	r0, r0, r0
+0x00000074:  00000000      andeq	r0, r0, r0
+0x00000078:  00000000      andeq	r0, r0, r0
+0x0000007c:  00000000      andeq	r0, r0, r0
+0x00000080:  00000000      andeq	r0, r0, r0
+0x00000084:  00000000      andeq	r0, r0, r0
+0x00000088:  00000000      andeq	r0, r0, r0
+0x0000008c:  00000000      andeq	r0, r0, r0
+0x00000090:  00000000      andeq	r0, r0, r0
+0x00000094:  00000000      andeq	r0, r0, r0
+0x00000098:  00000000      andeq	r0, r0, r0
+0x0000009c:  00000000      andeq	r0, r0, r0
+0x000000a0:  00000000      andeq	r0, r0, r0
+0x000000a4:  00000000      andeq	r0, r0, r0
+0x000000a8:  00000000      andeq	r0, r0, r0
+0x000000ac:  00000000      andeq	r0, r0, r0
+0x000000b0:  00000000      andeq	r0, r0, r0
+0x000000b4:  00000000      andeq	r0, r0, r0
+0x000000b8:  00000000      andeq	r0, r0, r0
+
+----------------
+IN: 
+0xffff0018:  ea000400      b	0xffff1020
+
+----------------
+IN: 
+0xffff1020:  e24ee004      sub	lr, lr, #4	; 0x4
+0xffff1024:  e88d4001      stm	sp, {r0, lr}
+0xffff1028:  e14fe000      mrs	lr, SPSR
+0xffff102c:  e58de008      str	lr, [sp, #8]
+0xffff1030:  e10f0000      mrs	r0, CPSR
+0xffff1034:  e2200001      eor	r0, r0, #1	; 0x1
+0xffff1038:  e16ff000      msr	SPSR_fsxc, r0
+
+----------------
+IN: 
+0xffff103c:  e20ee00f      and	lr, lr, #15	; 0xf
+0xffff1040:  e1a0000d      mov	r0, sp
+0xffff1044:  e79fe10e      ldr	lr, [pc, lr, lsl #2]
+0xffff1048:  e1b0f00e      movs	pc, lr
+
+----------------
+IN: 
+0x80701220:  e24dd04c      sub	sp, sp, #76	; 0x4c
+0x80701224:  e31d0004      tst	sp, #4	; 0x4
+0x80701228:  024dd004      subeq	sp, sp, #4	; 0x4
+0x8070122c:  e88d1ffe      stm	sp, {r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp, ip}
+0x80701230:  e8900038      ldm	r0, {r3, r4, r5}
+0x80701234:  e28d7030      add	r7, sp, #48	; 0x30
+0x80701238:  e3e06000      mvn	r6, #0	; 0x0
+0x8070123c:  e28d204c      add	r2, sp, #76	; 0x4c
+0x80701240:  02822004      addeq	r2, r2, #4	; 0x4
+0x80701244:  e52d3004      push	{r3}		; (str r3, [sp, #-4]!)
+0x80701248:  e1a0300e      mov	r3, lr
+0x8070124c:  e887007c      stm	r7, {r2, r3, r4, r5, r6}
+0x80701250:  e1a096ad      lsr	r9, sp, #13
+0x80701254:  e1a09689      lsl	r9, r9, #13
+0x80701258:  e5990008      ldr	r0, [r9, #8]
+0x8070125c:  e3a0147f      mov	r1, #2130706432	; 0x7f000000
+0x80701260:  e5891008      str	r1, [r9, #8]
+0x80701264:  e58d004c      str	r0, [sp, #76]
+0x80701268:  ebeb6ea4      bl	0x801dcd00
+
+----------------
+IN: 
+0x801dcd00:  e1a0c00d      mov	ip, sp
+0x801dcd04:  e92ddbf0      push	{r4, r5, r6, r7, r8, r9, fp, ip, lr, pc}
+0x801dcd08:  e24cb004      sub	fp, ip, #4	; 0x4
+0x801dcd0c:  e24dd008      sub	sp, sp, #8	; 0x8
+0x801dcd10:  e59f3100      ldr	r3, [pc, #256]	; 0xffffffff801dce18
+0x801dcd14:  e1a0400e      mov	r4, lr
+0x801dcd18:  e593205c      ldr	r2, [r3, #92]
+0x801dcd1c:  e3120002      tst	r2, #2	; 0x2
+0x801dcd20:  0a000005      beq	0x801dcd3c
+
+----------------
+IN: 
+0x801dcd3c:  e24bd024      sub	sp, fp, #36	; 0x24
+0x801dcd40:  e89dabf0      ldm	sp, {r4, r5, r6, r7, r8, r9, fp, sp, pc}
+
+----------------
+IN: 
+0x8070126c:  e59f1024      ldr	r1, [pc, #36]	; 0xffffffff80701298
+0x80701270:  e1a0000d      mov	r0, sp
+0x80701274:  e28fe000      add	lr, pc, #0	; 0x0
+0x80701278:  e591f000      ldr	pc, [r1]
+
+----------------
+IN: 
+0x80101464:  e1a0c00d      mov	ip, sp
+0x80101468:  e92dd818      push	{r3, r4, fp, ip, lr, pc}
+0x8010146c:  e24cb004      sub	fp, ip, #4	; 0x4
+0x80101470:  e52de004      push	{lr}		; (str lr, [sp, #-4]!)
+0x80101474:  e8bd4000      pop	{lr}
+0x80101478:  e1a0200d      mov	r2, sp
+0x8010147c:  e59f4088      ldr	r4, [pc, #136]	; 0xffffffff8010150c
+0x80101480:  e3c23d7f      bic	r3, r2, #8128	; 0x1fc0
+0x80101484:  e3c3303f      bic	r3, r3, #63	; 0x3f
+0x80101488:  e593e010      ldr	lr, [r3, #16]
+0x8010148c:  e594c004      ldr	ip, [r4, #4]
+0x80101490:  e1a01000      mov	r1, r0
+0x80101494:  e08c210e      add	r2, ip, lr, lsl #2
+0x80101498:  e5922060      ldr	r2, [r2, #96]
+0x8010149c:  e3120010      tst	r2, #16	; 0x10
+0x801014a0:  0a00000e      beq	0x801014e0
+
+----------------
+IN: 
+0x801014e0:  e3520000      cmp	r2, #0	; 0x0
+0x801014e4:  089da818      ldmeq	sp, {r3, r4, fp, sp, pc}
+
+----------------
+IN: 
+0x8070127c:  ebeb6e52      bl	0x801dcbcc
+
+----------------
+IN: 
+0x801dcbcc:  e1a0c00d      mov	ip, sp
+0x801dcbd0:  e92dd8f0      push	{r4, r5, r6, r7, fp, ip, lr, pc}
+0x801dcbd4:  e24cb004      sub	fp, ip, #4	; 0x4
+0x801dcbd8:  e24dd008      sub	sp, sp, #8	; 0x8
+0x801dcbdc:  e59f0110      ldr	r0, [pc, #272]	; 0xffffffff801dccf4
+0x801dcbe0:  e1a0400e      mov	r4, lr
+0x801dcbe4:  e590305c      ldr	r3, [r0, #92]
+0x801dcbe8:  e3130002      tst	r3, #2	; 0x2
+0x801dcbec:  0a00000e      beq	0x801dcc2c
+
+----------------
+IN: 
+0x801dcc2c:  e24bd01c      sub	sp, fp, #28	; 0x1c
+0x801dcc30:  e89da8f0      ldm	sp, {r4, r5, r6, r7, fp, sp, pc}
+
+----------------
+IN: 
+0x80701280:  e59d104c      ldr	r1, [sp, #76]
+0x80701284:  e5891008      str	r1, [r9, #8]
+0x80701288:  e16ff005      msr	SPSR_fsxc, r5
+
+----------------
+IN: 
+0x8070128c:  e24d0004      sub	r0, sp, #4	; 0x4
+0x80701290:  e1801f92      strex	r1, r2, [r0]
+0x80701294:  e8ddffff      ldm	sp, {r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp, ip, sp, lr, pc}^
+

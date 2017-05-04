@@ -129,6 +129,9 @@ _**Trigger interrupt using and trace the execution**_
 
 After acquiring the cpu state, then we [load](https://github.com/H4oK3/interrupt_analysis/blob/master/qemu_rpi/loadcpu/loadcpu.c) them in, and [trace](https://github.com/H4oK3/interrupt_analysis/blob/master/qemu_rpi/bbtrace/bbtrace.c) the block execution.
 
+`arm-softmmu/qemu-system-arm -machine rehosting,mem-map="MEM 0x00000000-0x3b000000" -panda loadcpu -d in_asm -D qemu.log	# will save trace to qemu.log`
+
+
 ---
 
 ## Future Work
