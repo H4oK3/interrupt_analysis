@@ -40,6 +40,7 @@ After making success on econotag system, we moved forward to a more complicated 
 We first [cross compile](https://www.raspberrypi.org/documentation/linux/kernel/building.md) and build kernel for raspberry pi 3:
 
 `pi@raspberrypi:~ $ uname -ar`
+
 `Linux raspberrypi 4.9.11-v7+ #1 SMP Tue Feb 21 16:51:15 EST 2017 armv7l GNU/Linux`
 
 ---
@@ -54,7 +55,6 @@ set the **CONFIG\_STRICT\_DEVMEM** option to **"no"**. Then we were able to just
 #### Approaches
 ##### 1. Symbolic Execution
 
----
 
 _**Address translation**_
 
@@ -108,12 +108,16 @@ Dumping the CPU state was a tricky part:
 In order to dump the CPU state(basically the value that each register holds), we build our own kernel module to do that. Check kernel\_module\_build/rpi for details.
 
 `export PATH=${PATH}:$(PWD)/rpi/tools/arm-bcm2708/gcc-linaro-arm-linux-  gnueabihf-raspbian-x64/bin`
+
 `cd path_to_rpi/rpi/LiME/src`
+
 `./mcmd.sh	# will compile main.c and create an kernel module`
 
 Then on raspberry pi:
 `sudo dmesg -C	# clear kernel message`
+
 `sudo insmod lime.ko`
+
 `dmesg		# now we have the cpu state`
 
 **NOTE:** using `show_regs` wasn't the best way of dumping the cpu state, because we may be missing lots of values of cpu states such as: ttbr, banked registers values, etc. In our test case, the sp register value wasn't quite right because `show_regs` didn't load **irq\_svc** mode stack address; and we did a hacky way to [work around] (need a link here!) that.
