@@ -1,0 +1,89 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+DBG	lime.h	53;"	d
+DBG	lime.h	55;"	d
+DFS	backup_main.c	/^void DFS(struct task_struct *task, int level)$/;"	f
+DUMPSIZE	backup_main.c	86;"	d	file:
+DUMPSIZE	test.c	71;"	d	file:
+KVER	Makefile	/^KVER ?= $(shell uname -r)$/;"	m
+LIME_DEBUG	lime.h	51;"	d
+LIME_MAGIC	lime.h	41;"	d
+LIME_MAX_FILENAME_SIZE	lime.h	40;"	d
+LIME_METHOD_DISK	lime.h	49;"	d
+LIME_METHOD_TCP	lime.h	48;"	d
+LIME_METHOD_UNKNOWN	lime.h	47;"	d
+LIME_MODE_LIME	lime.h	44;"	d
+LIME_MODE_PADDED	lime.h	45;"	d
+LIME_MODE_RAW	lime.h	43;"	d
+LIME_RAMSTR	lime.h	39;"	d
+LIME_SUPPORTS_TIMING	lime.h	59;"	d
+PWD	Makefile	/^PWD := $(shell pwd)$/;"	m
+RETRY_IF_INTURRUPTED	backup_main.c	66;"	d	file:
+RETRY_IF_INTURRUPTED	test.c	66;"	d	file:
+__LIME_H_	lime.h	25;"	d
+__this_module	lime.mod.c	/^__visible struct module __this_module$/;"	v	typeref:struct:module
+__used	lime.mod.c	/^__used$/;"	v	file:
+__used	lime.mod.c	/^__used$/;"	v	typeref:struct:____versions	file:
+accept	tcp.c	/^static struct socket *accept;$/;"	v	typeref:struct:socket	file:
+cleanup	backup_main.c	/^static void cleanup(void) {$/;"	f	file:
+cleanup	test.c	/^static void cleanup(void) {$/;"	f	file:
+cleanup_disk	disk.c	/^void cleanup_disk() {$/;"	f
+cleanup_module	backup_main.c	/^void cleanup_module(void)$/;"	f
+cleanup_module	test.c	/^void cleanup_module(void)$/;"	f
+cleanup_tcp	tcp.c	/^void cleanup_tcp() {$/;"	f
+control	tcp.c	/^static struct socket *control;$/;"	v	typeref:struct:socket	file:
+dio	backup_main.c	/^int dio = 0;$/;"	v
+dio	test.c	/^int dio = 0;$/;"	v
+disable_dio	disk.c	/^static void disable_dio() {$/;"	f	file:
+e_addr	lime.h	/^    unsigned long long e_addr;$/;"	m	struct:__anon1
+f	disk.c	/^static struct file * f = NULL;$/;"	v	typeref:struct:file	file:
+format	backup_main.c	/^static char * format = 0;$/;"	v	file:
+format	test.c	/^static char * format = 0;$/;"	v	file:
+hello_cleanup	main.c	/^module_exit(hello_cleanup);$/;"	v
+hello_cleanup	main.c	/^static void __exit hello_cleanup(void)$/;"	f	file:
+hello_init	main.c	/^module_init(hello_init);$/;"	v
+hello_init	main.c	/^static int __init hello_init(void)$/;"	f	file:
+init	backup_main.c	/^static int init() {$/;"	f	file:
+init	test.c	/^static int init() {$/;"	f	file:
+init_module	backup_main.c	/^int init_module (void)$/;"	f
+init_module	test.c	/^int init_module (void)$/;"	f
+lime-objs	Makefile	/^lime-objs := tcp.o disk.o main.o$/;"	m
+lime_mem_range_header	lime.h	/^} __attribute__ ((__packed__)) lime_mem_range_header;$/;"	t	typeref:struct:__anon1
+localhostonly	backup_main.c	/^int localhostonly = 0;$/;"	v
+localhostonly	test.c	/^int localhostonly = 0;$/;"	v
+magic	lime.h	/^    unsigned int magic;$/;"	m	struct:__anon1
+method	backup_main.c	/^static int method = 0;$/;"	v	file:
+method	test.c	/^static int method = 0;$/;"	v	file:
+mode	backup_main.c	/^static int mode = 0;$/;"	v	file:
+mode	test.c	/^static int mode = 0;$/;"	v	file:
+obj-m	Makefile	/^obj-m := lime.o$/;"	m
+path	backup_main.c	/^char * path = 0;$/;"	v
+path	test.c	/^char * path = 0;$/;"	v
+port	backup_main.c	/^int port = 0;$/;"	v
+port	test.c	/^int port = 0;$/;"	v
+reopen	disk.c	/^static int reopen = 0;$/;"	v	file:
+reserved	lime.h	/^    unsigned char reserved[8];$/;"	m	struct:__anon1
+s_addr	lime.h	/^    unsigned long long s_addr;$/;"	m	struct:__anon1
+setup	backup_main.c	/^static int setup(void) {$/;"	f	file:
+setup	test.c	/^static int setup(void) {$/;"	f	file:
+setup_disk	disk.c	/^int setup_disk() {$/;"	f
+setup_tcp	tcp.c	/^int setup_tcp() {$/;"	f
+timeout	backup_main.c	/^long timeout = 1000;$/;"	v
+timeout	test.c	/^long timeout = 1000;$/;"	v
+version	lime.h	/^    unsigned int version;$/;"	m	struct:__anon1
+write_lime_header	backup_main.c	/^static int write_lime_header(struct resource * res) {$/;"	f	file:
+write_lime_header	test.c	/^static int write_lime_header(struct resource * res) {$/;"	f	file:
+write_padding	backup_main.c	/^static ssize_t write_padding(size_t s) {$/;"	f	file:
+write_padding	test.c	/^static ssize_t write_padding(size_t s) {$/;"	f	file:
+write_range	backup_main.c	/^static void write_range(struct resource * res) {$/;"	f	file:
+write_range	test.c	/^static void write_range(struct resource * res) {$/;"	f	file:
+write_vaddr	backup_main.c	/^static ssize_t write_vaddr(void * v, size_t is) {$/;"	f	file:
+write_vaddr	test.c	/^static ssize_t write_vaddr(void * v, size_t is) {$/;"	f	file:
+write_vaddr_disk	disk.c	/^ssize_t write_vaddr_disk(void * v, size_t is) {$/;"	f
+write_vaddr_tcp	tcp.c	/^ssize_t write_vaddr_tcp(void * v, size_t is) {$/;"	f
+zero_page	backup_main.c	/^static char zero_page[PAGE_SIZE];$/;"	v	file:
+zero_page	test.c	/^static char zero_page[PAGE_SIZE];$/;"	v	file:

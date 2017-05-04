@@ -1,0 +1,1 @@
+cmd_/home/hao/data/project/rpi/LiME/src/lime.ko := arm-linux-gnueabihf-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /home/hao/data/project/rpi/LiME/src/lime.ko /home/hao/data/project/rpi/LiME/src/lime.o /home/hao/data/project/rpi/LiME/src/lime.mod.o ;  true
