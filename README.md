@@ -105,7 +105,9 @@ _**Load memory and CPU state**_
 Because we want qemu load our own memory file, we decided to use a customized machine definition: [Rehosting machine](https://github.com/H4oK3/auto-emulation2-runner/blob/master/hw/arm/rehosting.c).
 
 Dumping the CPU state was a tricky part:
-In order to dump the CPU state(basically the value that each register holds), we build our own kernel module to do that. Check kernel\_module\_build/rpi for details.
+In order to dump the CPU state(basically the value that each register holds), we build our own kernel module to do that. Check **kernel\_module\_build/** for details.
+
+You can just grab the kernel build module tool kit [here](http://panda.moyix.net/~moyix/rpi_lkm_build.tgz), and replace the `rpi/LiME/src` folder with `kernel_module_build` folder in the repo.
 
 `export PATH=${PATH}:$(PWD)/rpi/tools/arm-bcm2708/gcc-linaro-arm-linux-  gnueabihf-raspbian-x64/bin`
 
