@@ -1,14 +1,14 @@
 # Automatic interrupt analyzing
-##Objectives
+## Objectives
 The goal of our project is to build a tool that can automatically analyse Peripheral Interupts for ARM embeded system. 
 
-##Testcases
-###Econotag
+## Testcases
+### Econotag
 The Econotag is an open source and exceptionally simple example of an embedded system which makes it easier for us to testing our approach.
 
 --
 
-####Approaches:
+#### Approaches:
 **Symbolic Execution**([angr](http://angr.io/))
 
 We start our project based on [Isomano](https://github.com/fmaymi/Isomano) project, which used angr to implement a guided symbolic execution on econotag firmware. In this project, we optimized the program and make it automatic.			
@@ -17,7 +17,7 @@ In order to make angr works on the econotag firmware we dumped, we did several h
 
 --
 
-####Proof of concept:
+#### Proof of concept:
 `Input: python auto_map_handler.py econotag_new econotag_memdump.bin`
 
 `Output: Found the following interupt number and handler mappings:
@@ -29,14 +29,14 @@ In order to make angr works on the econotag firmware we dumped, we did several h
 
 --
 
-###Raspberry pi 3
+### Raspberry pi 3
 
 After making success on econotag system, we moved forward to a more complicated embedded device: raspberry pi 3. Unlike the previous test case, we are trying to test on a actual device ([Raspberry pi 3, Model B, 1GB RAM](https://en.wikipedia.org/wiki/Raspberry_Pi)). 
 
 --
 
-####Initial Setup
-#####kernel build
+#### Initial Setup
+##### kernel build
 We first [cross compile](https://www.raspberrypi.org/documentation/linux/kernel/building.md) and build kernel for raspberry pi 3:
 
 `pi@raspberrypi:~ $ uname -ar`
@@ -44,15 +44,15 @@ We first [cross compile](https://www.raspberrypi.org/documentation/linux/kernel/
 
 --
 
-#####Memory Dump
+##### Memory Dump
 The next step was trying to dump the memory out of raspberry pi, we tried to use LiME to extract the memory but it didn’t work out. Then we turned to another way: since we know we can
 recompile the kernel, we can just re-enable access to **/dev/mem**. The way to do this is before building the kernel, do make menuconfig and
 set the **CONFIG\_STRICT\_DEVMEM** option to **"no"**. Then we were able to just use dd on **/dev/mem** to create a memory dump. 
 
 --
 
-####Approaches
-#####1. Symbolic Execution
+#### Approaches
+##### 1. Symbolic Execution
 --
 
 _**Address translation**_
@@ -83,7 +83,7 @@ etc.
 
 --
 
-#####2. Fuzzing#####
+##### 2. Fuzzing
 
 After poking around with angr for a couple of weeks, we found the raspberry memory may be too complicate for angr to solve, and there are too many bugs(e.g. Incompatible instructions, symbolic read issues, etc.) we need to fix in order to make angr work. We decided to try the fuzzing way using [qemu/panda](https://github.com/panda-re/panda)。
 
@@ -126,7 +126,7 @@ After acquiring the cpu state, then we [load](link to loadcpu.c) them in, and [t
 
 --
 
-##Future Work##
+## Future Work
 
 
 
