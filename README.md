@@ -120,14 +120,14 @@ Then on raspberry pi:
 
 `dmesg		# now we have the cpu state`
 
-**NOTE:** using `show_regs` wasn't the best way of dumping the cpu state, because we may be missing lots of values of cpu states such as: ttbr, banked registers values, etc. In our test case, the sp register value wasn't quite right because `show_regs` didn't load **irq\_svc** mode stack address; and we did a hacky way to [work around] (need a link here!) that.
+**NOTE:** using `show_regs` wasn't the best way of dumping the cpu state, because we may be missing lots of values of cpu states such as: ttbr, banked registers values, etc. In our test case, the sp register value wasn't quite right because `show_regs` didn't load **irq\_svc** mode stack address; and we did a hacky way to [work around] (https://github.com/H4oK3/interrupt_analysis/blob/master/kernel_module_build/main.c#L83) that.
 
 ---
 
 
 _**Trigger interrupt using and trace the execution**_
 
-After acquiring the cpu state, then we [load](link to loadcpu.c) them in, and [trace ](link to bbtrace.c) the block execution.
+After acquiring the cpu state, then we [load](https://github.com/H4oK3/interrupt_analysis/blob/master/qemu_rpi/loadcpu/loadcpu.c) them in, and [trace](https://github.com/H4oK3/interrupt_analysis/blob/master/qemu_rpi/bbtrace/bbtrace.c) the block execution.
 
 ---
 
