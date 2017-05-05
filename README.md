@@ -150,6 +150,11 @@ Because the limited time, we didn't get to move forward to next step on our fuzz
 ### Fix angr bugs, _make symbolic execution great again_.
 Symbolic execution is **1337** (when it works), while angr is still on developing stage, in the future we probably can help fixing some angr issues and make it work on our arm architecture.
 
+## Contact
+If you are intereted in our project, or want to help extending it, feel free to contact:
+[Hao Ke](mailto:hk1952@nyu.edu?Subject=interrupt_handler_project)
+[Brendan Dolan-Gavitt](mailto:brendandg@nyu.edu?Subject=interrupt_handler_project)
+
 
 
 
