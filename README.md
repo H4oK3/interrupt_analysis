@@ -152,8 +152,10 @@ Symbolic execution is **1337** (when it works), while angr is still on developin
 
 ## Contact
 If you are intereted in our project, or want to help extending it, feel free to contact:
-[Hao Ke](mailto:hk1952@nyu.edu?Subject=interrupt_handler_project)
-[Brendan Dolan-Gavitt](mailto:brendandg@nyu.edu?Subject=interrupt_handler_project)
+
+**[Hao Ke](mailto:hk1952@nyu.edu?Subject=interrupt_handler_project)**
+
+**[Brendan Dolan-Gavitt](mailto:brendandg@nyu.edu?Subject=interrupt_handler_project)**
 
 
 
