@@ -48,7 +48,7 @@ We first [cross compile](https://www.raspberrypi.org/documentation/linux/kernel/
 ##### Memory Dump
 The next step was trying to dump the memory out of raspberry pi, we tried to use LiME to extract the memory, but it didn’t work out. Then we turned to another way: since we know we can
 recompile the kernel, we can just re-enable access to **/dev/mem**. The way to do this is before building the kernel, do make menuconfig and
-set the **CONFIG\_STRICT\_DEVMEM** option to **"no"**. Then we were able to just use dd on **/dev/mem** to create the [memory dump](http://107.170.178.208/mem_dump/mem). 
+set the **CONFIG\_STRICT\_DEVMEM** option to **"no"**. Then we were able to just use dd on **/dev/mem** to create the [memory dump](http://panda.moyix.net/~moyix/mem.gz). 
 
 
 
@@ -60,7 +60,7 @@ set the **CONFIG\_STRICT\_DEVMEM** option to **"no"**. Then we were able to just
 
 _**Address translation**_
 
-The memory dump we had was all based on physical address. To make angr work on the mem dump we just had, we need to figure out a way to let angr understand [virtual address translation](https://armv8-ref.codingbelief.com/en/chapter_d4/d42_1_about_the_vmsav8-64_address_translation_syste.html), and we did that using python (vtop_mem.py). After running our script on the original memory dump, now we have an [address-translated version of memory dump](http://107.170.178.208/mem_dump/mem_hack).
+The memory dump we had was all based on physical address. To make angr work on the mem dump we just had, we need to figure out a way to let angr understand [virtual address translation](https://armv8-ref.codingbelief.com/en/chapter_d4/d42_1_about_the_vmsav8-64_address_translation_syste.html), and we did that using python (vtop_mem.py). After running our script on the original memory dump, now we have an [address-translated version of memory dump](http://panda.moyix.net/~moyix/mem_hack.gz).
 
 ---
 
